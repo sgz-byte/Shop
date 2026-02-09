@@ -24,12 +24,14 @@
     nav a { margin:0 12px; font-size:16px; }
 
     /* --- Shop Section --- */
-    .shop { max-width: 1000px; margin:40px auto; display:grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap:30px; }
-    .item-card { background: var(--card); border-radius:16px; padding:20px; text-align:center; transition: transform .2s ease, box-shadow .2s ease; cursor:pointer; }
+    .shop { max-width: 900px; margin:40px auto; display:grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap:30px; }
+    .item-card { background: var(--card); border-radius:16px; padding:30px 20px; text-align:center; transition: transform .2s ease, box-shadow .2s ease; cursor:pointer; }
     .item-card:hover { transform: translateY(-4px); box-shadow:0 0 0 2px var(--accent); }
-    .item-image { width:100%; border-radius:12px; margin-bottom:12px; }
-    .item-name { font-size:18px; font-weight:700; margin-bottom:6px; }
-    .item-price { color: var(--accent); font-weight:700; }
+    .item-image { width:80px; height:80px; margin-bottom:16px; }
+    .item-name { font-size:20px; font-weight:700; margin-bottom:6px; }
+    .item-desc { font-size:14px; color: var(--muted); margin-bottom:12px; }
+    .shop-button { display:inline-block; margin-top:10px; padding:8px 16px; background: var(--accent); color:#000; border-radius:8px; font-weight:700; transition: transform .2s ease; }
+    .shop-button:hover { transform: scale(1.05); }
 
     /* --- Footer --- */
     footer { background: var(--bg-soft); border-top:1px solid var(--border); padding:40px 20px; text-align:center; font-size:13px; color: var(--muted); margin-top:60px; }
@@ -48,28 +50,29 @@
 </header>
 
 <section class="shop">
-  <!-- Example item 1 -->
-  <div class="item-card">
-    <img src="images/item1.png" alt="Item 1" class="item-image">
-    <div class="item-name">VIP Rank</div>
-    <div class="item-price">$5.99</div>
+  <!-- Ranks -->
+  <div class="item-card" onclick="window.open('https://ko-fi.com/gravesmp/shop', '_blank')">
+    <img src="images/rank.png" alt="Ranks" class="item-image">
+    <div class="item-name">Ranks</div>
+    <div class="item-desc">Get VIP, MVP, and more ranks for your account!</div>
+    <div class="shop-button">View on Ko-fi</div>
   </div>
 
-  <!-- Example item 2 -->
-  <div class="item-card">
-    <img src="images/item2.png" alt="Item 2" class="item-image">
-    <div class="item-name">Cosmetic Bundle</div>
-    <div class="item-price">$2.99</div>
+  <!-- Kits -->
+  <div class="item-card" onclick="window.open('https://ko-fi.com/gravesmp/shop', '_blank')">
+    <img src="images/kits.png" alt="Kits" class="item-image">
+    <div class="item-name">Kits</div>
+    <div class="item-desc">Buy special kits to level up your gameplay.</div>
+    <div class="shop-button">View on Ko-fi</div>
   </div>
 
-  <!-- Example item 3 -->
-  <div class="item-card">
-    <img src="images/item3.png" alt="Item 3" class="item-image">
-    <div class="item-name">Extra Lives</div>
-    <div class="item-price">$1.99</div>
+  <!-- Keys -->
+  <div class="item-card" onclick="window.open('https://ko-fi.com/gravesmp/shop', '_blank')">
+    <img src="images/keys.png" alt="Keys" class="item-image">
+    <div class="item-name">Keys</div>
+    <div class="item-desc">Purchase keys to unlock loot crates and prizes.</div>
+    <div class="shop-button">View on Ko-fi</div>
   </div>
-
-  <!-- Add more items below in the same format -->
 </section>
 
 <footer>
