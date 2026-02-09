@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YourStore</title>
+
+  <style>
+    :root {
+      --bg: #0b0b0e;
+      --bg-soft: #111118;
+      --card: #15151f;
+      --text: #e6e6eb;
+      --muted: #9a9aa6;
+      --accent: #7c7cff;
+      --border: #1f1f2a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(11,11,14,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      font-size: 18px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 12px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      font-size: 13px;
+      color: var(--muted);
+      background: var(--bg-soft);
+    }
+
+    footer .inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">YOURSTORE</div>
+    <div>Store</div>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Store</h1>
+  <p class="muted">Instant delivery · Secure checkout</p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>VIP Rank</h3>
+      <p>Basic perks and features.</p>
+      <div class="price">$5</div>
+      <!-- PayPal button goes here -->
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <h3>PRO Rank</h3>
+      <p>Extra perks and priority access.</p>
+      <div class="price">$10</div>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <h3>ELITE Rank</h3>
+      <p>All perks + exclusive features.</p>
+      <div class="price">$20</div>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="inner">
+    <div>© 2026 YOURSTORE</div>
+    <div>Not affiliated with Mojang or Microsoft.</div>
+  </div>
+</footer>
+
+</body>
+</html>
